@@ -66,7 +66,7 @@ jsondata = `{
         "codeRepository": "https://github.com/shrncr/gcm",
         "screenshots": [
           {
-            "src": "https://2.img-dpreview.com/files/p/E~C1000x0S4000x4000T1200x1200~articles/3925134721/0266554465.jpeg",
+            "src": "../images/gcm.png",
             "alt": "Screenshot of Project 1"
           }
         ],
@@ -80,7 +80,21 @@ jsondata = `{
         "codeRepository": "https://github.com/shrncr/ptb",
         "screenshots": [
           {
-            "src": "https://2.img-dpreview.com/files/p/E~C1000x0S4000x4000T1200x1200~articles/3925134721/0266554465.jpeg",
+            "src": "../images/ptb.png",
+            "alt": "Screenshot of Project 2"
+          }
+        ],
+        "category": "Web Dev"
+      },
+      {
+        "title": "NightlyReel",
+        "description": "Suggests similar movies/shows within a range of streaming services!",
+        "technologies": ["React", "Node.js", "MongoDB"],
+        "liveDemo": "https://nightlyreel.com",
+        "codeRepository": "https://github.com/shrncr/ptb",
+        "screenshots": [
+          {
+            "src": "../images/nightlyreel.png",
             "alt": "Screenshot of Project 2"
           }
         ],
@@ -140,9 +154,11 @@ data = JSON.parse(jsondata);
     // Iterate over each project in the JSON
     data.projects.forEach(project => {
       // Create the project item container
-      const projectItem = document.createElement('div');
+      const projectItem = document.createElement('a');
+      projectItem.href = project.liveDemo;
+      projectItem.target = "_blank"
       projectItem.className = 'item';
-
+      
       // Create the overlay for images
       const overlay = document.createElement('figure');
       overlay.className = 'overlay';

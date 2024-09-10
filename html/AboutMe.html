@@ -78,8 +78,12 @@
                 border-radius: 20px;
                 
             }
-            
-        
+            .totop{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+            }
             
         </style>
     </head>
@@ -88,9 +92,9 @@
         <h1>Personal Portfolio</h1>
         <section class = "navbuttons">
            <a href = "https://www.google.com"><button class = "button"><h3>Home</h3> </button></a>
-           <a href = "https://www.google.com"><button class = "button"><h3>About Me</h3> </button></a>
-           <a href = "https://www.google.com"><button class = "button"><h3>Projects</h3> </button></a>
-           <a href = "https://www.google.com"><button class = "button"><h3>Contact</h3> </button></a>
+           <a href = "AboutMe.html"><button class = "button"><h3>About Me</h3> </button></a>
+           <a href = "projects.html"><button class = "button"><h3>Projects</h3> </button></a>
+           <a href = "contact.html"><button class = "button"><h3>Contact</h3> </button></a>
         </section>
     </header>
     <hr>
@@ -136,8 +140,8 @@
         <label for="html">Javascript Proficiency</label>
         <progress id="html" value="50" max="100">50%</progress>
     </section>
-    <footer>
-
-    </footer>
+    <section class ="totop">
+        <a href="https://www.google.com"><button class = "button">Back to Top</button></a>
+    </section>
     </body>
 </html>

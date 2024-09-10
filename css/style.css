@@ -1,0 +1,101 @@
+.nav{
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+    float: right;
+    text-align: end;
+}
+h1{
+    
+    text-align: center;
+}
+.nav a{
+    text-decoration: none;
+    color:black;
+}
+
+.item .overlay img{
+    width: 100%;
+    height: 100%;
+
+}
+.overlay{
+    width: 100%;
+    height: 90%;
+}
+figure{
+    margin-top: 0px;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 45%;
+    width: 45%;
+    margin: 1%;
+
+}
+
+.itemsContainer{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.item {
+    position: relative; /* Ensure the item is positioned relative to its children */
+}
+
+.overlay {
+    position: relative; /* Ensure the overlay positions its pseudo-element correctly */
+}
+
+.overlay img {
+    width: 100%; /* Make sure the image fits within the overlay */
+    height: auto;
+    transition: filter 0.3s ease; /* Smooth transition for the blur effect */
+}
+
+.item:hover {
+    z-index: 2;
+    background-color: beige;
+    box-shadow: -1px 0.5px 1px rgba(0, 0, 0, 0.323);
+}
+
+.item:hover .overlay img {
+    z-index: 0;
+    filter: blur(2px); /* Blur the image on hover */
+}
+
+.overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Layer above the image but below other content */
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 50%);
+    display: none; /* Initially hide the gradient */
+}
+
+.item:hover .overlay::before {
+    display: block; /* Show the gradient on hover */
+}
+
+.innerHover {
+    display: none; /* Initially hide the innerHover elements */
+    position: absolute;
+    top: 10px; /* Adjust these positions as needed */
+    left: 10px;
+    z-index: 2; /* Ensure this appears above the gradient */
+    color: white; /* Make sure text is readable against the gradient */
+}
+
+.item:hover > .innerHover {
+    display: block; /* Show the innerHover content on hover */
+}
+

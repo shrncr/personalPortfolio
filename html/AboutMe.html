@@ -37,6 +37,7 @@
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-around;
+                padding-top:50px;
             }
             .main{
                 display: flex;
@@ -57,11 +58,13 @@
             }
             .column{
                 flex: 1;
+                align-self: center;
             
             }
             .column img{
                 max-width: 100%;
-                max-height: 100%;
+                max-height:fit-content;
+                padding: 5px;
             }
             img{
                 border-radius: 25px;
@@ -78,44 +81,58 @@
                 border-radius: 20px;
                 
             }
-            
-        
+            .totop{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+            }
             
         </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", ()=>{
+                const topbutton = document.getElementById("topbutton");
+                topbutton.addEventListener("click", () =>{
+                    window.scrollTo({top:0, behavior:"smooth"});
+                });
+            });
+        </script>
     </head>
     <body>
     <header class = "nav">
         <h1>Personal Portfolio</h1>
         <section class = "navbuttons">
            <a href = "https://www.google.com"><button class = "button"><h3>Home</h3> </button></a>
-           <a href = "https://www.google.com"><button class = "button"><h3>About Me</h3> </button></a>
-           <a href = "https://www.google.com"><button class = "button"><h3>Projects</h3> </button></a>
-           <a href = "https://www.google.com"><button class = "button"><h3>Contact</h3> </button></a>
+           <a href = "AboutMe.html"><button class = "button"><h3>About Me</h3> </button></a>
+           <a href = "projects.html"><button class = "button"><h3>Projects</h3> </button></a>
+           <a href = "contact.html"><button class = "button"><h3>Contact</h3> </button></a>
         </section>
     </header>
     <hr>
     <section class = "title">
-        <h2>About Me</h2>
+        <h1>About Me</h1>
     </section>
     <section class = "main">
         <section class = "maincol">
-            <img src = "" width ="100%" height="80%">
+            <img src = "../images/profilepic.jpg" alt = "Profile picture of person." width ="100%" height="80%">
             <a href = "https://www.google.com"><button class = "button"><h3>Download Resume</h3> </button></a>
         </section>
         <section class = "maincol">
-            <article>*Insert biography here*</article>
+            <p> I'm ---, a computer science student at University of Tampa. Growing up in a small town in Iowa, I was always fascinated by technology. My curiosity led me to pursue a major in Computer Science, where I quickly developed a passion for programming and algorithms.</p>
+            <p>After my sophomore year, I interned at a tech startup, working on a smart home mobile app. This hands-on experience taught me the importance of clean, efficient code, and teamwork. My junior year brought a research assistant position focusing on AI and machine learning, where I helped develop a real-time chatbot. This sparked my interest in AI, leading me to take more specialized courses.</p>
+            <p>Outside of academics, I'm an avid gamer and enjoy building custom gaming PCs. I also contribute to open-source projects on GitHub. In my free time, I love playing with my dog, cooking, and hiking.</p>
         </section>
         <section class = "maincol">
             <section class = "img-grid">
                 <section class = "column">
-                    <img src = "">
-                    <img src = "">
-                    <img src = "">
+                    <img src = "../images/utlogo.png" alt = "University of Tampa Logo">
+                    <img src = "../images/hiking.jpg" alt = "Man hiking on mountain with snow.">
+                    <img src = "../images/dog.jpg" alt = "German shepherd ">
                 </section>
                 <section class = "column">
-                    <img src = "">
-                    <img src = "">
-                    <img src = "">
+                    <img src = "../images/tech.jpg" alt="Glowing phone with smart home icons.">
+                    <img src = "../images/cooking.jpg" alt="Photo with a variety of veggies spread on table with cast iron skillet in the center, as well as other cooking utensils.">
+                    <img src = "../images/gaming.jpg" alt="Computer and console gaming essentials. Keyboard, mouse,controller, nintendo switch, etc.">
                 </section>
     
             </section>
@@ -136,8 +153,8 @@
         <label for="html">Javascript Proficiency</label>
         <progress id="html" value="50" max="100">50%</progress>
     </section>
-    <footer>
-
-    </footer>
+    <section class ="totop">
+        <a><button class = "button" id = "topbutton"><h3>Back to Top</h3></button></a>
+    </section>
     </body>
 </html>

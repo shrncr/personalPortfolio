@@ -1,73 +1,73 @@
+/* Header Navigation */
 .nav {
     display: flex;
-    flex-direction: row;
-    column-gap: 500px;
-    align-items: baseline;
-    justify-content: space-around;
-
-}
-.navbuttons{
-    display: flex;
-    column-gap: 20px;
-    justify-content: right;
-}
-.button{
-    padding: 5px;
-    border: 1px solid white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
     background-color: white;
-    
 }
-.button :hover{
-    padding: 5px;
-    background-color: lightblue;
-    border: 1px solid lightblue;
-    border-radius: 20px;
-}
-.title{
+
+.navbuttons {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    padding-top:50px;
+    gap: 30px;
 }
-.main{
+
+.navbuttons a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Profile Section */
+.main {
     display: flex;
-    flex-direction: rows;
-    column-gap: 50px;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
+    padding: 50px;
+    gap: 50px;
 }
 
-.headshot{
-    flex: 1;
-    text-align: center;
-    border-radius: 50px;
-    border: 1px solid #000;
-
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
 }
 
-.introbox{
-    flex: 1;
-    text-align: center;
-    width: 657px;
-    height: 312px;
-    flex-shrink: 0;
-    border-radius: 81px;
-    background: #FF5959;
-
-    
+.profile-img {
+    border-radius: 50%; /* Makes image circular */
+    width: 250px;
+    height: 250px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.introbox {
+    text-align: left;
+    max-width: 500px;
+}
 
+.introbox h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
 
-/* For circular buttons */
+.introbox h2 {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.introbox p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Circular Buttons */
 .circular-button-container {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Spacing between the buttons */
-    margin-top: 20px; /* Space between introbox and buttons */
+    gap: 30px;
+    margin-top: 50px;
 }
 
 .circular-button {
@@ -76,10 +76,9 @@
     align-items: center;
     width: 120px;
     height: 120px;
-    text-align: center;
     border-radius: 50%;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none;
     transition: 0.3s ease;
 }
@@ -100,45 +99,34 @@
     background-color: #f3722c;
 }
 
-/* Footer styling */
+/* Footer */
 .footer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 20px;
-    background-color: white;
-    border-top: 1px solid white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
 }
 
 .footer-left {
-    display: flex;
-    gap: 40px; /* Space between phone and email */
     font-family: Arial, sans-serif;
     font-size: 14px;
 }
 
 .footer-right {
-    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .social-icons {
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
-.social-icons a {
-    text-decoration: none;
+.social-icons a img {
+    width: 25px;
+    height: 25px;
 }
-
-.social-icons img {
-    width: 30px;
-    height: 30px;
-}
-
-
-
-
 

@@ -2,25 +2,31 @@
 <html lang="en">
     <head>
         <style>
-            /* css style help from 
-            https://www.w3schools.com/howto/howto_js_image_grid.asp
-            https://medium.com/@MakeComputerScienceGreatAgain/understanding-flexbox-a-comprehensive-guide-992bcd5f04de
-            https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
-            */
             .nav {
                 display: flex;
-                flex-direction: row;
-                column-gap: 500px;
-                align-items: baseline;
-                justify-content: space-around;
-        
+                justify-content: flex-end;
+                padding: 20px;
+                background-color: #fff;
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+                position: sticky;
+                top: 0;
+                z-index: 10;
             }
-            .navbuttons{
-                display: flex;
-                column-gap: 20px;
-                justify-content: right;
+ 
+            .nav a {
+                text-decoration: none;
+                color: black;
+                margin-left: 2vw;
+                font-size: 1em;
+                padding-bottom: 5px;
+                position: relative;
+            }
+            
+            .nav a:hover {
+                border-bottom: 3px solid #333;
+            }
                 
-            }
+        
             .button{
                 padding: 5px;
                 border: 1px solid white;
@@ -100,16 +106,15 @@
         </script>
     </head>
     <body>
-    <header class = "nav">
-        <h1>Personal Portfolio</h1>
-        <section class = "navbuttons">
-           <a href = "Homepage.html"><button class = "button"><h3>Home</h3> </button></a>
-           <a href = "AboutMe.html"><button class = "button"><h3>About Me</h3> </button></a>
-           <a href = "projects.html"><button class = "button"><h3>Projects</h3> </button></a>
-           <a href = "contact.html"><button class = "button"><h3>Contact</h3> </button></a>
-        </section>
+    <header>
+        <div class = "nav">
+           <a href = "Homepage.html">Home</a>
+           <a href = "AboutMe.html">About Me</a>
+           <a href = "projects.html">Projects</a>
+           <a href = "contact.html">Contact</a>
+        </div>
     </header>
-    <hr>
+    
     <section class = "title">
         <h1>About Me</h1>
     </section>

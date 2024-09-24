@@ -1,7 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="../css/StyleAbout.css">
+        <style>
+            /* css style help from 
+            https://www.w3schools.com/howto/howto_js_image_grid.asp
+            https://medium.com/@MakeComputerScienceGreatAgain/understanding-flexbox-a-comprehensive-guide-992bcd5f04de
+            https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
+            */
+            .nav {
+                display: flex;
+                flex-direction: row;
+                column-gap: 500px;
+                align-items: baseline;
+                justify-content: space-around;
+        
+            }
+            .navbuttons{
+                display: flex;
+                column-gap: 20px;
+                justify-content: right;
+                
+            }
+            .button{
+                padding: 5px;
+                border: 1px solid white;
+                background-color: white;
+                
+            }
+            .button :hover{
+                padding: 5px;
+                background-color: lightblue;
+                border: 1px solid lightblue;
+                border-radius: 20px;
+            }
+            .title{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                padding-top:50px;
+            }
+            .main{
+                display: flex;
+                flex-direction: rows;
+                column-gap: 50px;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .maincol{
+                flex: 1;
+                text-align: center;
+            }
+            
+            .img-grid{
+                display:flex;
+                flex-direction: row;
+                gap: 10px;
+            }
+            .column{
+                flex: 1;
+                align-self: center;
+            
+            }
+            .column img{
+                max-width: 100%;
+                max-height:fit-content;
+                padding: 5px;
+            }
+            img{
+                border-radius: 25px;
+            }
+            .bars {
+                display: flex;
+                flex-direction: rows;
+                align-items: center;
+                justify-content: center;
+                column-gap: 30px;
+            }progress{
+                background-color: white;
+                color: lightblue;
+                border-radius: 20px;
+                
+            }
+            .totop{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+            }
+            
+        </style>
         <script>
             document.addEventListener("DOMContentLoaded", ()=>{
                 const topbutton = document.getElementById("topbutton");

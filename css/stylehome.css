@@ -1,4 +1,5 @@
 /* Header Navigation */
+/*
 .nav {
     display: flex;
     justify-content: space-between;
@@ -18,7 +19,42 @@
     color: black;
     font-weight: bold;
     font-size: 16px;
-}
+
+    */
+
+    /* Navigation Bar Styling */
+ .nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+ }
+ 
+ .nav a {
+    text-decoration: none;
+    color: black;
+    margin-left: 2vw;
+    font-size: 1em;
+    padding-bottom: 5px;
+    position: relative;
+ }
+ 
+ .nav a:hover {
+    border-bottom: 3px solid #333;
+ }
+
+  /* Title Styling */
+  h1 {
+    text-align: center;
+    padding: 2vh;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+ }
 
 /* Profile Section */
 .main {
@@ -68,6 +104,7 @@
     justify-content: center;
     gap: 30px;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .circular-button {
@@ -110,6 +147,8 @@
 }
 
 .footer-left {
+    display: flex;
+    gap: 525px;
     font-family: Arial, sans-serif;
     font-size: 14px;
 }

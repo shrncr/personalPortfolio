@@ -5,7 +5,11 @@ import "../navstyle.css"
 export default function NavBar(){
     return(
         <header>
-            <div class="nav"><Link to="/home">Home</Link><Link to="/aboutme">About Me</Link><Link tp="/projects">Projects</Link><Link to="/contact">Contact</Link></div>
+            <div class="nav">
+                <a href="/">Home</a>
+                <a href="/aboutme">About Me</a>
+                <a href="/projects">Projects</a>
+                <a href="/contact">Contact</a></div>
         </header>
     )
 }

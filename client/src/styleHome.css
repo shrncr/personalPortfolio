@@ -1,0 +1,122 @@
+ /* Title Styling */
+  h1 {
+    text-align: center;
+    padding: 2vh;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+ }
+
+/* Profile Section */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 50px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.profile-img {
+    border-radius: 50%; /* Makes image circular */
+    width: 250px;
+    height: 250px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.introbox {
+    text-align: left;
+    max-width: 500px;
+}
+
+.introbox h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.introbox h2 {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.introbox p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Circular Buttons */
+.circular-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.circular-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.circular-button:hover {
+    transform: scale(1.1);
+}
+
+.yellow {
+    background-color: #f9c74f;
+}
+
+.blue {
+    background-color: #90be6d;
+}
+
+.orange {
+    background-color: #f3722c;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+}
+
+.footer-left {
+    display: flex;
+    gap: 525px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 25px;
+    height: 25px;
+}
+

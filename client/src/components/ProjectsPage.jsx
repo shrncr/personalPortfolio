@@ -51,7 +51,7 @@ export default function ProjectsPage(){
         ]
     return(
         <>
-            <NavBar/>
+            
 
             <h1 className="title">Projects</h1>
 

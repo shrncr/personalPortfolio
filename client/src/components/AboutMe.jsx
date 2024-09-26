@@ -1,11 +1,12 @@
 import React from "react"
 import NavBar from "./NavBar"
 import "../../src/styleAbout.css"
+import useScrollToTop from "../aboutMe.js"
 
 export default function AboutMe(){
+    useScrollToTop("topbutton");
     return (
         <>
-           
 
             <section class = "title">
                 <h1>About Me</h1>
@@ -57,6 +58,8 @@ export default function AboutMe(){
             <section class ="totop">
                 <a><button class = "button" id = "topbutton"><h3>Back to Top</h3></button></a>
             </section>
+            
+
         </>
     )
 };

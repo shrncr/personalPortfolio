@@ -19,7 +19,7 @@ body {
     z-index: 10;
  }
  
- .nav a {
+ .nav Link {
     text-decoration: none;
     color: black;
     margin-left: 2vw;
@@ -28,6 +28,6 @@ body {
     position: relative;
  }
  
- .nav a:hover {
+ .nav Link:hover {
     border-bottom: 3px solid #333;
  }

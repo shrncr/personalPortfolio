@@ -5,7 +5,7 @@ import "../../src/styleAbout.css"
 export default function AboutMe(){
     return (
         <>
-            <NavBar/>
+           
 
             <section class = "title">
                 <h1>About Me</h1>
@@ -13,8 +13,8 @@ export default function AboutMe(){
 
             <section class = "main">
                 <section class = "maincol">
-                    <img src = "../../publicimages/profilepic.jpg" alt = "Profile picture of person." width ="100%" height="80%"/>
-                    <a href = "https://www.google.com"><button class = "button"><h3>Download Resume</h3> </button></a>
+                    <img src = "/images/profilepic.jpg" alt = "Profile picture of person." width ="100%" height="80%"/>
+                    <a href = "/Resume.pdf" download="Resume.pdf"><button class = "button"><h3>Download Resume</h3> </button></a>
                 </section>
 
                 <section class = "maincol">
@@ -26,14 +26,14 @@ export default function AboutMe(){
                 <section class = "maincol">
                     <section class = "img-grid">
                         <section class = "column">
-                            <img src = "../../public/images/utlogo.png" alt = "University of Tampa Logo"/>
-                            <img src = "../../public/images/hiking.jpg" alt = "Man hiking on mountain with snow."/>
-                            <img src = "../../publicimages/dog.jpg" alt = "German shepherd "/>
+                            <img src = "/images/utlogo.png" alt = "University of Tampa Logo"/>
+                            <img src = "/images/hiking.jpg" alt = "Man hiking on mountain with snow."/>
+                            <img src = "/images/dog.jpg" alt = "German shepherd "/>
                         </section>
                         <section class = "column">
-                            <img src = "../../publicimages/tech.jpg" alt="Glowing phone with smart home icons."/>
-                            <img src = "../../publicimages/cooking.jpg" alt="Photo with a variety of veggies spread on table with cast iron skillet in the center, as well as other cooking utensils."/>
-                            <img src = "../../publicimages/gaming.jpg" alt="Computer and console gaming essentials. Keyboard, mouse,controller, nintendo switch, etc."/>
+                            <img src = "/images/tech.jpg" alt="Glowing phone with smart home icons."/>
+                            <img src = "/images/cooking.jpg" alt="Photo with a variety of veggies spread on table with cast iron skillet in the center, as well as other cooking utensils."/>
+                            <img src = "/images/gaming.jpg" alt="Computer and console gaming essentials. Keyboard, mouse,controller, nintendo switch, etc."/>
                         </section>
         
                     </section>

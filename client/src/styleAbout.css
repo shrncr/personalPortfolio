@@ -1,15 +1,11 @@
 
 .button{
-    padding: 5px;
-    border: 1px solid white;
-    background-color: white;
-    
+    border: 0px;  
 }
 .button :hover{
     padding: 5px;
-    background-color: lightblue;
-    border: 1px solid lightblue;
-    border-radius: 20px;
+    border-bottom: 3px solid #333;
+    position:relative;
 }
 .title{
     display: flex;
@@ -47,6 +43,8 @@
 }
 img{
     border-radius: 25px;
+    position:initial;
+    
 }
 .bars {
     display: flex;

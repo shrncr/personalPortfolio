@@ -1,6 +1,6 @@
 import React from "react"
 import NavbAr from "./NavBar"
-import "../../src/styleHome.css"
+import "../../src/css/styleHome.css"
 
 export default function Home(){
     return(

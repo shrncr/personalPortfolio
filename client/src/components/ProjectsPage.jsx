@@ -1,7 +1,6 @@
 import React from "react"
 import Project from "./Project"
-import NavBar from "./NavBar"
-import "../../src/style.css"
+import "../../src/css/style.css"
 export default function ProjectsPage(){
     //NOTE: Components return html. Your return statements must always return a single parent element
     //a safe bet is to wrap all of your html in empty tags.
@@ -58,7 +57,7 @@ export default function ProjectsPage(){
             <div className="itemsContainer" id="icontain">
 
                     {projects.map(project =>{
-                        return <Project title = {project.title} tech ={project.technologies} desc ={project.description} img={project.screenshots[0].src} link={project.link} />
+                        return <Project title = {project.title} tech ={project.technologies} desc ={project.description} img={project.screenshots[0].src} link={project.liveDemo} />
                     })}
                 
             </div>

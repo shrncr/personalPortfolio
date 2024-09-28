@@ -1,6 +1,6 @@
 import React from "react"
 import NavBar from "./NavBar"
-import "../../src/styleAbout.css"
+import "../../src/css/styleAbout.css"
 import useScrollToTop from "../aboutMe.js"
 
 export default function AboutMe(){

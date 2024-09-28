@@ -11,14 +11,14 @@ export default function Project(props){
     //props is like the data you put in the constructor
 
     const title = props.title;
-    const tech = props.tech;
+    const tech = props.tech.join(", ");
     const desc = props.desc;
     const img = props.img;
     console.log(img)
     const link = props.link;
-    console.log("hi");
+    console.log(link);
     return(
-        <a className="item">
+        <a className="item" href={link} target="_blank" rel="noopener noreferrer">
             <figure className="overlay">
                 <img src={"images/" + img}></img>
             </figure>
@@ -32,7 +32,7 @@ export default function Project(props){
                     <p>{desc}</p>
                 </span>
             </div>
-            <p className="title">{title}</p>
+            <p className="titlep">{title}</p>
         </a>
     ) //I am returning the html layout of a single project
 }

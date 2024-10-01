@@ -12,11 +12,11 @@ export default function ContactPage(){
         message: ""
       });
       const [formErrors, setFormErrors] = useState({
-        name: "enter name",
-        number: "enter number",
-        email: "enter email",
-        subject: "enter subject",
-        message: "enter message"
+        name: " ",
+        number: " ",
+        email: " ",
+        subject: " ",
+        message: " "
       });
       const validateField = (name, value) => {
         let errors = { ...formErrors };
@@ -71,11 +71,11 @@ export default function ContactPage(){
     return(
         <>
             <form id="ContactForm">
-                <input type="text-box" placeholder="Name" name="name" value={formData.name} id="name" onChange={handleChange} className={formErrors.name !== "" ? "invalid" : "valid"}/>
-                <input type="text-box" placeholder="Mobile Phone Number" name="number" value={formData.number} id="number" onChange={handleChange} className={formErrors.number !== "" ? "invalid" : "valid"}/>
-                 <input type="text-box" placeholder="Email address" name="email" value={formData.email} id="email" onChange={handleChange} className={formErrors.email !== "" ? "invalid" : "valid"} />
-                 <input type="text-box" placeholder="Subject message" name="subject" value={formData.subject} id="subject" onChange={handleChange} className={formErrors.subject !== "" ? "invalid" : "valid"}/>
-                 <input type="text-box" placeholder="Your Message" name="message" value={formData.message} id="message" onChange={handleChange} className={formErrors.message !== "" ? "invalid" : "valid"}/>
+                <input type="text-box" placeholder="Name" name="name" value={formData.name} id="name" onChange={handleChange} className={formErrors.name == " " ? "": (formErrors.name !== "" ? "invalid" : "valid")}/>
+                <input type="text-box" placeholder="Mobile Phone Number" name="number" value={formData.number} id="number" onChange={handleChange} className={formErrors.number == " " ? "": (formErrors.number !== "" ? "invalid" : "valid")} />
+                 <input type="text-box" placeholder="Email address" name="email" value={formData.email} id="email" onChange={handleChange} className={formErrors.email == " " ? "": (formErrors.email !== "" ? "invalid" : "valid")} />
+                 <input type="text-box" placeholder="Subject message" name="subject" value={formData.subject} id="subject" onChange={handleChange}className={formErrors.subject == " " ? "": (formErrors.subject !== "" ? "invalid" : "valid")}/>
+                 <input type="text-box" placeholder="Your Message" name="message" value={formData.message} id="message" onChange={handleChange} className={formErrors.message == " " ? "": (formErrors.message !== "" ? "invalid" : "valid")}/>
                  <input type="submit" value="Submit" id="submitBtn" onClick={handleSubmit}/>
             </form> 
             <div id="socials">

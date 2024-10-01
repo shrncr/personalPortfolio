@@ -11,9 +11,9 @@ export default function Home(){
                 <div class="profile-section">
                     <img class="profile-img" src="../images/profilepic.jpg" alt="Profile picture of person"/>
                     <div class="introbox">
-                    <h1>Your Name</h1>
-                    <h2>Professional Title (e.g., Web Developer)</h2>
-                    <p>A brief statement about your career goals and a welcome message.</p>
+                    <h1>John Dow</h1>
+                    <h2>Senior Full Stack Developer</h2>
+                    <p>Passionate about creating scalable web applications and user-friendly experiences. With over 8 years of experience in both frontend and backend development, John excels at solving complex technical challenges and delivering high-quality solutions.</p>
                     </div>
                 </div>
             </section>
@@ -27,15 +27,15 @@ export default function Home(){
             
             <footer class="footer">
                 <div class="footer-left">
-                    <p><strong>Phone</strong><br></br>707-707-7079</p><p><strong>Email</strong><br></br>leo.messi@gmail.com</p>
+                    <p><strong>Phone</strong><br></br>(555) 123-4567</p><p><strong>Email</strong><br></br>john.dow@gmail.com</p>
                 </div>
                 <div class="footer-right">
                     <p>Follow Me</p>
                     <div class="social-icons">
-                        <a href="#"><img src="../images/facebook-icon.png" alt="Facebook"/></a>
-                        <a href="#"><img src="../images/twitter-icon.png" alt="Twitter"/></a>
-                        <a href="#"><img src="../images/instagram-icon.png" alt="Instagram"/></a>
-                        <a href="#"><img src="../images/youtube-icon.png" alt="YouTube"/></a>
+                        <a href="https://www.facebook.com/"><img src="../images/facebook-icon.png" alt="Facebook"/></a>
+                        <a href="https://x.com/"><img src="../images/twitter-icon.png" alt="Twitter"/></a>
+                        <a href="https://www.instagram.com/"><img src="../images/instagram-icon.png" alt="Instagram"/></a>
+                        <a href="https://www.youtube.com/"><img src="../images/youtube-icon.png" alt="YouTube"/></a>
                     </div>
                 </div>
             </footer>

@@ -47,7 +47,14 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
-
+.valid{
+    outline-style: solid;
+    outline-color: green;
+}
+.invalid{
+    outline-style: solid;
+    outline-color: red;
+}
 #ContactForm input[type="text-box"] {
     width: 90%;
     padding: 10px;

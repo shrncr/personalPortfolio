@@ -12,11 +12,11 @@ export default function ContactPage(){
         message: ""
       });
       const [formErrors, setFormErrors] = useState({
-        name: "",
-        number: "",
-        email: "",
-        subject: "",
-        message: ""
+        name: "enter name",
+        number: "enter number",
+        email: "enter email",
+        subject: "enter subject",
+        message: "enter message"
       });
       const validateField = (name, value) => {
         let errors = { ...formErrors };
@@ -58,8 +58,9 @@ export default function ContactPage(){
         e.preventDefault();
         const isValid = Object.values(formErrors).every((error) => error === "") &&
                         Object.values(formData).every((field) => field !== "");
+        let errs = Object.values(formErrors);
         if (!isValid) {
-          alert("Please correct the form errors before submitting\n");
+          alert("Please correct the form errors before submitting\n" + errs.filter(fella => fella !== ""));
 
         } else {
           // Submit the form (e.g., send an API request)
@@ -70,13 +71,13 @@ export default function ContactPage(){
     return(
         <>
             <form id="ContactForm">
-                <input type="text-box" placeholder="Name" name="name" value={formData.name} id="name" onChange={handleChange} />
-                <input type="text-box" placeholder="Mobile Phone Number" name="number" value={formData.number} id="number" onChange={handleChange} />
-                 <input type="text-box" placeholder="Email address" name="email" value={formData.email} id="email" onChange={handleChange} />
-                 <input type="text-box" placeholder="Subject message" name="subject" value={formData.subject} id="subject" onChange={handleChange} />
-                 <input type="text-box" placeholder="Your Message" name="message" value={formData.message} id="message" onChange={handleChange} />
+                <input type="text-box" placeholder="Name" name="name" value={formData.name} id="name" onChange={handleChange} className={formErrors.name !== "" ? "invalid" : "valid"}/>
+                <input type="text-box" placeholder="Mobile Phone Number" name="number" value={formData.number} id="number" onChange={handleChange} className={formErrors.number !== "" ? "invalid" : "valid"}/>
+                 <input type="text-box" placeholder="Email address" name="email" value={formData.email} id="email" onChange={handleChange} className={formErrors.email !== "" ? "invalid" : "valid"} />
+                 <input type="text-box" placeholder="Subject message" name="subject" value={formData.subject} id="subject" onChange={handleChange} className={formErrors.subject !== "" ? "invalid" : "valid"}/>
+                 <input type="text-box" placeholder="Your Message" name="message" value={formData.message} id="message" onChange={handleChange} className={formErrors.message !== "" ? "invalid" : "valid"}/>
                  <input type="submit" value="Submit" id="submitBtn" onClick={handleSubmit}/>
-            </form>
+            </form> 
             <div id="socials">
                  <a href="https://www.linkedin.com/" target="_blank"><img src="../images/linkedin.png" /></a>
                  <a href="https://github.com/" target="_blank"><img src="../images/git.png"/></a>

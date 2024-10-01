@@ -3,7 +3,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #323848;
     color: #333;
  }
  
@@ -17,16 +17,18 @@ body {
     position: sticky;
     top: 0;
     z-index: 10;
+    color:#323848;
  }
  
  .nav a {
     text-decoration: none;
-    color: black;
+    color: red;
     margin-left: 2vw;
-    font-size: 2em;
+    font-size: 1em;
     padding-bottom: 5px;
     position: relative;
-    font-family:Georgia, serif;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
  }
  
  .nav a:hover {

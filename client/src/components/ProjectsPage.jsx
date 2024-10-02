@@ -49,6 +49,33 @@ export default function ProjectsPage(){
               }
             ],
             "category": "Web Dev"
+          },
+          {
+            "title": "Skin Irritant Scanner",
+            "description": "Checks products on Sephora.com for irritating skin ingredients with custom searching algorithm.",
+            "technologies": ["Javascript", "Html/Css"],
+            "liveDemo": "https://chromewebstore.google.com/detail/skin-irritant-scanner/dfjalffpecaoggbgcjcfpggjkgabjdkj",
+            "codeRepository": "https://github.com/shrncr/irritantscanner",
+            "screenshots": [
+              {
+                "src": "skinscanner.jpg",
+                "alt": "Picture of Skin Irritant Scanner in Use"
+              }
+            ],
+            "category": "Web Dev"
+          },{
+            "title": "Program Profiler",
+            "description": "Intended to check for academic dishonesty in coding assignments. Creates a program profile for a student based on previous submissions and compares incoming programs to this profile. Provides a similarity score indicating if student followed their typical programming practices.",
+            "technologies": ["Python", "Numpy", "Pandas", "SciPy"],
+            "liveDemo": "https://github.com/shrncr/programProfiler",
+            "codeRepository": "https://github.com/shrncr/programProfiler",
+            "screenshots": [
+              {
+                "src": "profiler.png",
+                "alt": "Picture of program profiler"
+              }
+            ],
+            "category": "Machine Learning"
           }
         ]
     return(

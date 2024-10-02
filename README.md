@@ -8,8 +8,8 @@ Personal portfolio webpage created in CSC350
 Create a personal portfolio website that showcases our skills, projects, and professional experiences, using languages such as HTML, CSS, and Javascript. 
 
 ## Features
-- Navigation Bar with Routing
-- Home page with a profile picture, quick links to socials, and quick summary about yourself
+- Navigation bar with routing
+- Home page with a profile picture, quick links to socials and resume, and quick summary about career goals
 - About Me page with biography, profile picture, additional images, and skills section.
 - Projects page with displays of completed projects and professional experience
 - Contact page with contact form

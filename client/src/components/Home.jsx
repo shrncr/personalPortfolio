@@ -71,16 +71,16 @@ export default function Home() {
           {/* Social media icons */}
           <div className="social-icons">
             <a href="https://www.facebook.com/">
-              <img src="../images/facebook-icon.png" alt="Facebook" />
+              <img src="../images/facebook.png" alt="Facebook" />
             </a>
             <a href="https://x.com/">
               <img src="../images/twitter-icon.png" alt="Twitter" />
             </a>
             <a href="https://www.instagram.com/">
-              <img src="../images/instagram-icon.png" alt="Instagram" />
+              <img src="../images/insta.png" alt="Instagram" />
             </a>
             <a href="https://www.youtube.com/">
-              <img src="../images/youtube-icon.png" alt="YouTube" />
+              <img src="../images/youtube.png" alt="YouTube" />
             </a>
           </div>
         </div>

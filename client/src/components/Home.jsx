@@ -1,8 +1,10 @@
 import React from "react";
 import NavBar from "./NavBar"; // Importing the NavBar component
 import "../../src/css/styleHome.css"; // Importing custom CSS
+import useScrollToTop from "../aboutMe.js"; // Importing custom scroll-to-top hook
 
 export default function Home() {
+  useScrollToTop("topbutton"); // Using a custom hook to scroll to the top when the button is clicked
   return (
     <div>
       
@@ -51,6 +53,14 @@ export default function Home() {
           </a>
         </section>
       </main>
+      {/* Back to Top button */}
+      <section className="totop">
+        <a>
+          <button className="button" id="topbutton">
+            <h3>Back to Top</h3>
+          </button>
+        </a>
+      </section>
 
       {/* Footer section containing contact details and social media icons */}
       <footer className="footer">

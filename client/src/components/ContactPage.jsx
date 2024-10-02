@@ -2,8 +2,10 @@ import React from "react";
 import { useState } from "react"; // Importing useState hook for form state management
 import NavBar from "./NavBar"; // Importing the NavBar component
 import "../../src/css/stylecontact.css"; // Importing custom CSS for the Contact page
+import useScrollToTop from "../aboutMe.js"; // Importing custom scroll-to-top hook
 
 export default function ContactPage() {
+  useScrollToTop("topbutton"); // Using a custom hook to scroll to the top when the button is clicked
   // State to store form data
   const [formData, setFormData] = useState({
     name: "",
@@ -149,6 +151,47 @@ export default function ContactPage() {
           <img src="../images/git.png" alt="GitHub" />
         </a>
       </div>
+      {/* Back to Top button */}
+      <section className="totop">
+        <a>
+          <button className="button" id="topbutton">
+            <h3>Back to Top</h3>
+          </button>
+        </a>
+      </section>
+      {/* Footer section containing contact details and social media icons */}
+      <footer className="footer">
+        <div className="footer-left">
+          <p>
+            <strong>Phone</strong>
+            <br />
+            (555)-123-4567
+          </p>
+          <p>
+            <strong>Email</strong>
+            <br />
+            john.dow@gmail.com
+          </p>
+        </div>
+        <div className="footer-right">
+          <p>Follow Me</p>
+          {/* Social media icons */}
+          <div className="social-icons">
+            <a href="https://www.facebook.com/">
+              <img src="../images/facebook.png" alt="Facebook" />
+            </a>
+            <a href="https://x.com/">
+              <img src="../images/twitter-icon.png" alt="Twitter" />
+            </a>
+            <a href="https://www.instagram.com/">
+              <img src="../images/insta.png" alt="Instagram" />
+            </a>
+            <a href="https://www.youtube.com/">
+              <img src="../images/youtube.png" alt="YouTube" />
+            </a>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

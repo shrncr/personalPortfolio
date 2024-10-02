@@ -118,6 +118,39 @@ export default function AboutMe() {
           </button>
         </a>
       </section>
+      {/* Footer section containing contact details and social media icons */}
+      <footer className="footer">
+        <div className="footer-left">
+          <p>
+            <strong>Phone</strong>
+            <br />
+            (555)-123-4567
+          </p>
+          <p>
+            <strong>Email</strong>
+            <br />
+            john.dow@gmail.com
+          </p>
+        </div>
+        <div className="footer-right">
+          <p>Follow Me</p>
+          {/* Social media icons */}
+          <div className="social-icons">
+            <a href="https://www.facebook.com/">
+              <img src="../images/facebook.png" alt="Facebook" />
+            </a>
+            <a href="https://x.com/">
+              <img src="../images/twitter-icon.png" alt="Twitter" />
+            </a>
+            <a href="https://www.instagram.com/">
+              <img src="../images/insta.png" alt="Instagram" />
+            </a>
+            <a href="https://www.youtube.com/">
+              <img src="../images/youtube.png" alt="YouTube" />
+            </a>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

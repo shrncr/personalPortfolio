@@ -4,6 +4,7 @@ body {
     color: #333;
     padding: 0;
     margin: 0;
+    
 }
 
 header .nav {
@@ -46,6 +47,7 @@ h1 {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+
 }
 .valid{
     outline-style: solid;
@@ -62,6 +64,7 @@ h1 {
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
+    font-family: Georgia, serif;
 }
 
 #ContactForm input[type="text-box"]:focus {
@@ -93,6 +96,7 @@ h1 {
     cursor: pointer; 
     font-size: 16px; 
     margin-top: 10px;
+    font-family: Georgia, serif;
 }
 
 #submitBtn:hover {

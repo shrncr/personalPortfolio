@@ -1,6 +1,6 @@
 /* General Body Styling */
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #323848;
@@ -12,25 +12,27 @@ body {
     display: flex;
     justify-content: flex-end;
     padding: 20px;
-    background-color:#323848;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 10;
-    color:#323848;
+    background-color:#323848;
  }
  
  .nav a {
     text-decoration: none;
-    color: red;
+    color: white;
     margin-left: 2vw;
     font-size: 1em;
     padding-bottom: 5px;
     position: relative;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    
 
  }
  
  .nav a:hover {
-    border-bottom: 3px solid #333;
+    border-bottom: 3px solid white;
  }
+ 

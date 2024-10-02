@@ -1,15 +1,15 @@
 import React from "react";
-import {Link} from "react-router-dom"
-import "../../src/css/navstyle.css"
+import "../css/navstyle.css"
 
 export default function NavBar(){
     return(
-        <header>
-            <div class="nav">
+        <header class = "nav">
+            <div>
                 <a href="/">Home</a>
                 <a href="/aboutme">About Me</a>
                 <a href="/projects">Projects</a>
-                <a href="/contact">Contact</a></div>
+                <a href="/contact">Contact</a>
+            </div>
         </header>
     )
 }

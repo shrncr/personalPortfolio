@@ -1,97 +1,98 @@
 import React from "react";
-import NavBar from "./NavBar"; // Importing the NavBar component
-import "../../src/css/styleHome.css"; // Importing custom CSS
-import useScrollToTop from "../aboutMe.js"; // Importing custom scroll-to-top hook
+import NavBar from "./NavBar";
+import "../../src/css/styleHome.css";
+import useScrollToTop from "../aboutMe.js";
 
 export default function Home() {
-  useScrollToTop("topbutton"); // Using a custom hook to scroll to the top when the button is clicked
+  useScrollToTop("topbutton");
+
+  // Centralized JSON data object
+  const jsonData = {
+    title: "Personal Portfolio",
+    person: {
+      name: "Peter Pan",
+      title: "Senior Full Stack Developer",
+      bio: "Passionate about creating scalable web applications and user-friendly experiences. With over 8 years of experience in both frontend and backend development, John excels at solving complex technical challenges and delivering high-quality solutions.",
+    },
+    profileImage: "../images/profilepic.jpg",
+    circularButtons: [
+      { text: "Resume", href: "/Resume.pdf", className: "yellow", download: true },
+      { text: "Projects", href: "/projects", className: "blue" },
+      { text: "Contact", href: "/contact", className: "orange" },
+    ],
+    contactInfo: {
+      phone: "(555)-123-4567",
+      email: "john.dow@gmail.com",
+    },
+    socialMedia: [
+      { href: "https://www.facebook.com/", icon: "../images/facebook.png", alt: "Facebook" },
+      { href: "https://x.com/", icon: "../images/twitter-icon.png", alt: "Twitter" },
+      { href: "https://www.instagram.com/", icon: "../images/insta.png", alt: "Instagram" },
+      { href: "https://www.youtube.com/", icon: "../images/youtube.png", alt: "YouTube" },
+    ],
+  };
+
   return (
     <div>
-      
       <main>
-        {/* Main title for the portfolio */}
-        <h1 className="title">Personal Portfolio</h1>
+        <h1 className="title">{jsonData.title}</h1>
 
-        {/* Profile section */}
         <section className="main">
           <div className="profile-section">
-            {/* Profile image */}
             <img
               className="profile-img"
-              src="../images/profilepic.jpg"
+              src={jsonData.profileImage}
               alt="Profile picture of person"
             />
-            {/* Introduction box with name, title, and bio */}
             <div className="introbox">
-              <h1>John Dow</h1>
-              <h2>Senior Full Stack Developer</h2>
-              <p>
-                Passionate about creating scalable web applications and
-                user-friendly experiences. With over 8 years of experience in
-                both frontend and backend development, John excels at solving
-                complex technical challenges and delivering high-quality
-                solutions.
-              </p>
+              <h1>{jsonData.person.name}</h1>
+              <h2>{jsonData.person.title}</h2>
+              <p>{jsonData.person.bio}</p>
             </div>
           </div>
         </section>
 
-        {/* Circular buttons section for navigation to Resume, Projects, and Contact */}
         <section className="circular-button-container">
-          <a
-            href="/Resume.pdf"
-            download="Resume.pdf"
-            className="circular-button yellow"
-          >
-            Resume
-          </a>
-          <a href="/projects" className="circular-button blue">
-            Projects
-          </a>
-          <a href="/contact" className="circular-button orange">
-            Contact
-          </a>
+          {jsonData.circularButtons.map((button, index) => (
+            <a
+              key={index}
+              href={button.href}
+              className={`circular-button ${button.className}`}
+              download={button.download || false}
+            >
+              {button.text}
+            </a>
+          ))}
         </section>
       </main>
-      {/* Back to Top button */}
+
       <section className="totop">
-        <a>
-          <button className="button" id="topbutton">
-            <h3>Back to Top</h3>
-          </button>
-        </a>
+        <button className="button" id="topbutton">
+          <h3>Back to Top</h3>
+        </button>
       </section>
 
-      {/* Footer section containing contact details and social media icons */}
       <footer className="footer">
         <div className="footer-left">
           <p>
             <strong>Phone</strong>
             <br />
-            (555)-123-4567
+            {jsonData.contactInfo.phone}
           </p>
           <p>
             <strong>Email</strong>
             <br />
-            john.dow@gmail.com
+            {jsonData.contactInfo.email}
           </p>
         </div>
         <div className="footer-right">
           <p>Follow Me</p>
-          {/* Social media icons */}
           <div className="social-icons">
-            <a href="https://www.facebook.com/">
-              <img src="../images/facebook.png" alt="Facebook" />
-            </a>
-            <a href="https://x.com/">
-              <img src="../images/twitter-icon.png" alt="Twitter" />
-            </a>
-            <a href="https://www.instagram.com/">
-              <img src="../images/insta.png" alt="Instagram" />
-            </a>
-            <a href="https://www.youtube.com/">
-              <img src="../images/youtube.png" alt="YouTube" />
-            </a>
+            {jsonData.socialMedia.map((social, index) => (
+              <a key={index} href={social.href}>
+                <img src={social.icon} alt={social.alt} />
+              </a>
+            ))}
           </div>
         </div>
       </footer>

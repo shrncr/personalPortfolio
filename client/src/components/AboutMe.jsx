@@ -1,153 +1,131 @@
 import React from "react";
-import NavBar from "./NavBar"; // Importing the NavBar component
-import "../../src/css/styleAbout.css"; // Importing custom CSS for the About Me page
-import useScrollToTop from "../aboutMe.js"; // Importing custom scroll-to-top hook
+import NavBar from "./NavBar"; // Import NavBar component
+import "../../src/css/styleAbout.css"; // Import custom CSS
+import useScrollToTop from "../aboutMe.js"; // Import custom hook
+
+// Centralized JSON data object
+const jsonData = {
+  title: "About Me",
+  profileImage: "/images/profilepic.jpg",
+  resumeLink: "/Resume.pdf",
+  person: {
+    name: "John Dow",
+    intro: "I'm John Dow, a computer science student at the University of Tampa. Growing up in a small town in Iowa, I was always fascinated by technology. My curiosity led me to pursue a major in Computer Science, where I quickly developed a passion for programming and algorithms.",
+    experience: "After my sophomore year, I interned at a tech startup, working on a smart home mobile app. This hands-on experience taught me the importance of clean, efficient code, and teamwork. My junior year brought a research assistant position focusing on AI and machine learning, where I helped develop a real-time chatbot. This sparked my interest in AI, leading me to take more specialized courses.",
+    hobbies: "Outside of academics, I'm an avid gamer and enjoy building custom gaming PCs. I also contribute to open-source projects on GitHub. In my free time, I love playing with my dog, cooking, and hiking.",
+  },
+  gallery: [
+    { src: "/images/utlogo.png", alt: "University of Tampa Logo" },
+    { src: "/images/hiking.jpg", alt: "Man hiking on mountain with snow." },
+    { src: "/images/dog.jpg", alt: "My German Shepherd!" },
+    { src: "/images/tech.jpg", alt: "Glowing phone with smart home icons." },
+    { src: "/images/cooking.jpg", alt: "Cooking with a variety of veggies." },
+    { src: "/images/gaming.jpg", alt: "Computer and console gaming essentials." },
+  ],
+  skills: [
+    { name: "HTML", proficiency: 75 },
+    { name: "Python", proficiency: 95 },
+    { name: "CSS", proficiency: 60 },
+    { name: "JavaScript", proficiency: 50 },
+  ],
+  contactInfo: {
+    phone: "(555)-123-4567",
+    email: "john.dow@gmail.com",
+  },
+  socialMedia: [
+    { href: "https://www.facebook.com/", icon: "../images/facebook.png", alt: "Facebook" },
+    { href: "https://x.com/", icon: "../images/twitter-icon.png", alt: "Twitter" },
+    { href: "https://www.instagram.com/", icon: "../images/insta.png", alt: "Instagram" },
+    { href: "https://www.youtube.com/", icon: "../images/youtube.png", alt: "YouTube" },
+  ],
+};
 
 export default function AboutMe() {
-  useScrollToTop("topbutton"); // Using a custom hook to scroll to the top when the button is clicked
-  
+  useScrollToTop("topbutton");
+
   return (
     <>
-      {/* About Me title section */}
+      {/* Title Section */}
       <section className="title">
-        <h1>About Me</h1>
+        <h1>{jsonData.title}</h1>
       </section>
 
-      {/* Main content section */}
+      {/* Main Content Section */}
       <section className="main">
-        
-        {/* Profile image and resume download button */}
         <section className="maincol">
           <img
-            src="/images/profilepic.jpg"
+            src={jsonData.profileImage}
             alt="Profile picture of person."
             width="100%"
             height="80%"
           />
-          <a href="/Resume.pdf" download="Resume.pdf">
+          <a href={jsonData.resumeLink} download="Resume.pdf">
             <button className="button">
               <h3>Download Resume</h3>
             </button>
           </a>
         </section>
 
-        {/* Personal description section */}
         <section className="maincol">
-          <p>
-            I'm John Dow, a computer science student at the University of Tampa. Growing up
-            in a small town in Iowa, I was always fascinated by technology. My curiosity
-            led me to pursue a major in Computer Science, where I quickly developed a
-            passion for programming and algorithms.
-          </p>
-          <p>
-            After my sophomore year, I interned at a tech startup, working on a smart
-            home mobile app. This hands-on experience taught me the importance of clean,
-            efficient code, and teamwork. My junior year brought a research assistant
-            position focusing on AI and machine learning, where I helped develop a
-            real-time chatbot. This sparked my interest in AI, leading me to take more
-            specialized courses.
-          </p>
-          <p>
-            Outside of academics, I'm an avid gamer and enjoy building custom gaming PCs.
-            I also contribute to open-source projects on GitHub. In my free time, I love
-            playing with my dog, cooking, and hiking.
-          </p>
+          <p>{jsonData.person.intro}</p>
+          <p>{jsonData.person.experience}</p>
+          <p>{jsonData.person.hobbies}</p>
         </section>
 
-        {/* Image gallery section */}
+        {/* Image Gallery Section */}
         <section className="maincol">
           <section className="img-grid">
-            <section className="column">
-              <img src="/images/utlogo.png" alt="University of Tampa Logo" />
-              <img
-                src="/images/hiking.jpg"
-                alt="Man hiking on mountain with snow."
-              />
-              <img src="/images/dog.jpg" alt="My German Shepherd!" />
-            </section>
-            <section className="column">
-              <img
-                src="/images/tech.jpg"
-                alt="Glowing phone with smart home icons."
-              />
-              <img
-                src="/images/cooking.jpg"
-                alt="Variety of veggies spread on a table with a cast iron skillet in the center, as well as other cooking utensils."
-              />
-              <img
-                src="/images/gaming.jpg"
-                alt="Computer and console gaming essentials. Keyboard, mouse, controller, Nintendo Switch, etc."
-              />
-            </section>
+            {jsonData.gallery.map((image, index) => (
+              <img key={index} src={image.src} alt={image.alt} />
+            ))}
           </section>
         </section>
       </section>
 
-      {/* Skills section */}
+      {/* Skills Section */}
       <section className="title">
         <h2>Skills</h2>
       </section>
-
-      {/* Progress bars for skills */}
       <section className="bars">
-        <label htmlFor="html">HTML Proficiency</label>
-        <progress id="html" value="75" max="100">
-          75%
-        </progress>
-        <label htmlFor="python">Python Proficiency</label>
-        <progress id="python" value="95" max="100">
-          95%
-        </progress>
-      </section>
-      <section className="bars">
-        <label htmlFor="css">CSS Proficiency</label>
-        <progress id="css" value="60" max="100">
-          60%
-        </progress>
-        <label htmlFor="javascript">Javascript Proficiency</label>
-        <progress id="javascript" value="50" max="100">
-          50%
-        </progress>
+        {jsonData.skills.map((skill, index) => (
+          <div key={index}>
+            <label htmlFor={skill.name.toLowerCase()}>{skill.name} Proficiency</label>
+            <progress id={skill.name.toLowerCase()} value={skill.proficiency} max="100">
+              {skill.proficiency}%
+            </progress>
+          </div>
+        ))}
       </section>
 
-      {/* Back to Top button */}
+      {/* Back to Top Button */}
       <section className="totop">
-        <a>
-          <button className="button" id="topbutton">
-            <h3>Back to Top</h3>
-          </button>
-        </a>
+        <button className="button" id="topbutton">
+          <h3>Back to Top</h3>
+        </button>
       </section>
-      {/* Footer section containing contact details and social media icons */}
+
+      {/* Footer Section */}
       <footer className="footer">
         <div className="footer-left">
           <p>
             <strong>Phone</strong>
             <br />
-            (555)-123-4567
+            {jsonData.contactInfo.phone}
           </p>
           <p>
             <strong>Email</strong>
             <br />
-            john.dow@gmail.com
+            {jsonData.contactInfo.email}
           </p>
         </div>
         <div className="footer-right">
           <p>Follow Me</p>
-          {/* Social media icons */}
           <div className="social-icons">
-            <a href="https://www.facebook.com/">
-              <img src="../images/facebook.png" alt="Facebook" />
-            </a>
-            <a href="https://x.com/">
-              <img src="../images/twitter-icon.png" alt="Twitter" />
-            </a>
-            <a href="https://www.instagram.com/">
-              <img src="../images/insta.png" alt="Instagram" />
-            </a>
-            <a href="https://www.youtube.com/">
-              <img src="../images/youtube.png" alt="YouTube" />
-            </a>
+            {jsonData.socialMedia.map((social, index) => (
+              <a key={index} href={social.href}>
+                <img src={social.icon} alt={social.alt} />
+              </a>
+            ))}
           </div>
         </div>
       </footer>
